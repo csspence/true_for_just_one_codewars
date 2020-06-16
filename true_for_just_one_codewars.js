@@ -11,6 +11,12 @@ one([1, 3, 5, 6, 99, 88, 3], bigger_than_ten) -> false
 one([1, 3, 5, 6, 5, 1, 3], bigger_than_ten) -> false
 */
 
-function one(arr, fun){
-  // ...
+const one = (arr, fun) => {
+  let count = 0;
+  for(let i = 0; i < arr.length; i++) {
+    if(fun(arr[i]) === true) {
+      count++;
+    }
+  }
+  return count === 1 ? true : false;
 }
